@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL =
-  'https://mateuszbieda.github.io/goit-react-hw-08-phonebook/';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 // Utility to add JWT
 
@@ -76,7 +75,7 @@ export const refreshUser = createAsyncThunk(
     }
     try {
       setAuthHeader(persistedToken);
-      const res = await axios.get('users/me');
+      const res = await axios.get('users/current');
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
