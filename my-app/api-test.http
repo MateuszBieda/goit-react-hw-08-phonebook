@@ -1,17 +1,19 @@
 @baseUrl = https://connections-api.herokuapp.com
-@token = YOUR_TOKEN_HERE
-### Get All Contacts
-GET {{baseUrl}}/users/current
+
+
+
+@token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjVmOTViYWI3NGFhMzAwMTU0ZmQ2YzYiLCJpYXQiOjE3MTc1NDExMDl9.f60jM1ygwrZjfVJUDHWrHGYlfoMR2Qa5Sa3K0C606ZY';
+GET  https://connections-api.herokuapp.com/users/current
 Accept: application/json
-Autorization: Bearer {{token}}
+Authorization: Bearer {{token}}
 ### Add a New Contact
-POST {{baseUrl}}/users/signup
+POST https://connections-api.herokuapp.com/users/signup
 Content-Type: application/json
 
 {
-  "name": "Jan Nowak",
-  "email": "jan.nowak@example.com",
-  "password": "67894687"
+  "name": "Nowak",
+  "email": "nowak@example.com",
+  "password": "67894999687"
 }
 
 

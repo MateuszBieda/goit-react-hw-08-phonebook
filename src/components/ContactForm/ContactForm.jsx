@@ -14,7 +14,7 @@ export const ContactForm = () => {
     const contact = {
       id: nanoid(),
       name: e.currentTarget.elements.name.value,
-      number: e.currentTarget.elements.number.value,
+      phone: e.currentTarget.elements.number.value,
     };
 
     const nameExist = contacts.find(

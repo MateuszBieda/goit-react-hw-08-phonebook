@@ -4,20 +4,20 @@ import { fetchContacts,addContact,deleteContact } from './operations';
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: {
-    items: [],
+    contacts: [],
     isLoading: false,
     error: null,
   },
 
   extraReducers: builder => {
     builder
-      .addCase(fetchContacts.pending, (state, action) => {
+      .addCase(fetchContacts.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(fetchContacts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.items = action.payload;
+        state.contacts = action.payload;
       })
       .addCase(fetchContacts.rejected, (state, action) => {
         state.isLoading = false;
@@ -28,7 +28,7 @@ const contactsSlice = createSlice({
         state.isLoading = false;
       })
       .addCase(addContact.fulfilled, (state, action) => {
-        state.items = [...state.items, action.payload];
+        state.contacts = [...state.contacts, action.payload];
         state.error = null;
         state.isLoading = false;
       })
@@ -40,10 +40,10 @@ const contactsSlice = createSlice({
         state.isLoading = false;
       })
       .addCase(deleteContact.fulfilled, (state, action) => {
-        const index = (state.items = state.items.findIndex(
-          item => item.id === action.payload.id
+        const index = (state.contacts = state.contacts.findIndex(
+          contact => contact.id === action.payload.id
         ));
-        state.items.splice(index, 1);
+        state.contacts.splice(index, 1);
         state.error = null;
         state.isLoading = false;
       });
