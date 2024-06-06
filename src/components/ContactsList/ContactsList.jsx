@@ -23,8 +23,8 @@ export const ContactsList = () => {
           <ListItem mb='15px' color="#2C7744" fontWeight="700" fontSize="20px" key={id}>
             <Box w='800px' display='flex' flexDirection='row' justifyContent='space-between'>
               <Box display='flex' flexDirection='row' >
-            <Text  color='#8360c3' mr='8px' >{name}: </Text>
-            <Text mr='20px'>{number} </Text>
+            <Text fontWeight='400' color='#8360c3' mr='8px' >{name}: </Text>
+            <Text fontWeight='400'  mr='20px'>{number} </Text>
             </Box>
             <Button
               variant="solid"

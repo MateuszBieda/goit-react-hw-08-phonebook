@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/auth/operations';
 import { useAuth } from 'hooks';
-import { Button,Text } from '@chakra-ui/react';
+import { Button, Text } from '@chakra-ui/react';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -9,7 +9,16 @@ export const UserMenu = () => {
 
   return (
     <diV>
-      <Text display='inline-block' color='brown' fontSize='20px' mt='8px' mr='12px' fontWeight='bold'>Welcome, {user.name}</Text>
+      <Text
+        display="inline-block"
+        color="brown"
+        fontSize="20px"
+        mt="8px"
+        mr="12px"
+        fontWeight="bold"
+      >
+        Welcome, {user.name}
+      </Text>
       <Button
         type="button"
         variant="solid"
@@ -21,8 +30,8 @@ export const UserMenu = () => {
         h="30px"
         fontSize="10px"
         background="#58C1B2"
-        mr='6px'
-        opacity='0.9'
+        mr="6px"
+        opacity="0.9"
         onClick={() => dispatch(logOut())}
       >
         Logout

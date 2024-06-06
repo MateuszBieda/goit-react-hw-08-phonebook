@@ -20,7 +20,8 @@ export const RegisterForm = () => {
   };
 
   return (
-    <Flex as='form'
+    <Flex
+      as="form"
       onSubmit={handleSubmit}
       autoComplete="off"
       direction="column"
@@ -30,52 +31,58 @@ export const RegisterForm = () => {
       justifyContent="center"
       justifyItems="center"
     >
-      <FormLabel alignContent="center" fontSize="30px" color='brown'>
-        Username  </FormLabel>
-        <Input
-          type="text"
-          name="name"
-          variant="outline"
-          color="teal"
-          w="280px"
-          h="50px"
-          fontSize="20px"
-          size="md"
-          placeholder="Username"
-          border='solid,#D6BC2A , 3px'
-        />
-    
-      <FormLabel alignContent="center" fontSize="30px" color='brown'>
-        Email  </FormLabel>
-        <Input
-          type="email"
-          name="email"
-          placeholder="Email"
-          variant="outline"
-          color="teal"
-          w="280px"
-          h="50px"
-          fontSize="20px"
-          size="md"
-          border='solid,#D6BC2A , 3px'
-        />
-    
-      <FormLabel alignContent="center" fontSize="30px" color='brown'> 
-        Password  </FormLabel>
-        <Input
-          type="password"
-          name="password"
-          placeholder="Password"
-          variant="outline"
-          color="teal"
-          w="280px"
-          h="50px"
-          fontSize="20px"
-          size="md"
-          mb="30px"
-          border='solid,#D6BC2A , 3px'
-        />
-    
+      <FormLabel alignContent="center" fontSize="30px" color="brown">
+        Username{' '}
+      </FormLabel>
+      <Input
+        type="text"
+        name="name"
+        variant="outline"
+        color="teal"
+        w="280px"
+        h="50px"
+        fontSize="20px"
+        size="md"
+        focusBorderColor="pink.300"
+        borderColor="green.100"
+        border="2px"
+      />
+
+      <FormLabel alignContent="center" fontSize="30px" color="brown">
+        Email{' '}
+      </FormLabel>
+      <Input
+        type="email"
+        name="email"
+        variant="outline"
+        color="teal"
+        w="280px"
+        h="50px"
+        fontSize="20px"
+        size="md"
+        focusBorderColor="pink.300"
+        borderColor="green.100"
+        border="2px"
+      />
+
+      <FormLabel alignContent="center" fontSize="30px" color="brown">
+        Password{' '}
+      </FormLabel>
+      <Input
+        type="password"
+        name="password"
+        variant="outline"
+        color="teal"
+        w="280px"
+        h="50px"
+        fontSize="20px"
+        size="md"
+        mb="30px"
+        focusBorderColor="pink.300"
+        borderColor="green.100"
+        border="2px"
+      />
+
       <Button
         variant="solid"
         colorScheme="blue"
@@ -86,7 +93,7 @@ export const RegisterForm = () => {
         w="280px"
         h="50px"
         fontSize="20px"
-        background='#257C4A'
+        background="#257C4A"
       >
         Register{' '}
       </Button>

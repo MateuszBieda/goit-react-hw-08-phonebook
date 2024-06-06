@@ -12,19 +12,24 @@ import './index.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
+    <Box
+              bgGradient="linear(to-r, green.300, yellow.400, orange.200)"
+              minHeight="100vh"
+              width="100vw"
+              position="relative"
+              zIndex="1"
+              p='3'
+            >
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter basename="/goit-react-hw-08-phonebook">
-            <Box
-              bgGradient="linear(to-r, green.300, yellow.400, orange.200)"
-              height="100vh"
-              width="100vw"
-            >
+          
               <App />
-            </Box>
+           
           </BrowserRouter>
         </PersistGate>
       </Provider>
+      </Box>
     </ChakraProvider>
   </React.StrictMode>
 );

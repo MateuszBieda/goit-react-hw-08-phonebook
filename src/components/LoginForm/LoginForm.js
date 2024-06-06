@@ -35,14 +35,14 @@ export const LoginForm = () => {
       <Input
         type="email"
         name="email"
-        size="md"
-        placeholder="Email"
-        variant="outline"
+        size="md"  
         color="teal"
         w="280px"
         h="50px"
         fontSize="20px"
-        border="solid,#D6BC2A , 3px"
+        focusBorderColor='pink.300'
+        borderColor='green.300'
+        border='2px'
       />
 
       <FormLabel alignContent="center" fontSize="30px" color="brown">
@@ -52,14 +52,15 @@ export const LoginForm = () => {
         type="password"
         name="password"
         size="md"
-        variant="outline"
-        placeholder="Password"
+        variant="outline"    
         color="teal"
         w="280px"
         h="50px"
         mb="30px"
         fontSize="20px"
-        border="solid,#D6BC2A , 3px"
+        focusBorderColor='pink.300'
+        borderColor='green.100'
+        border='2px'
       />
 
       <Button

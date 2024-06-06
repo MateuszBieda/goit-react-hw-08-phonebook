@@ -8,7 +8,7 @@ export const Filter = () => {
   const filter = useSelector(getFilter);
 
   return (
-    <FormLabel  display='flex' flexDirection='column' justifyContent='flex-start'>
+    <FormLabel mt='16px' display='flex' flexDirection='column' justifyContent='flex-start'>
       <Text color ='rgb(24, 124, 196)' fontWeight='700' fontSize='20px' mb='15'>Find contacts by name</Text>
       <Input
       mb='25px'
