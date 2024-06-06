@@ -14,7 +14,7 @@ export const Navigation = () => {
           to="/"
           color="brown"
           fontSize="20px"
-          margin="8px"
+         
           fontWeight="bold"
         >
           Home
