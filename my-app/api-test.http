@@ -10,12 +10,17 @@ Authorization: Bearer {{token}}
 POST https://connections-api.herokuapp.com/users/signup
 Content-Type: application/json
 
-{
-  "name": "Nowak",
-  "email": "nowak@example.com",
-  "password": "67894999687"
-}
+# {
+#   "name": "Nowak",
+#   "email": "nowak@example.com",
+#   "password": "67894999687"
+# }
 
+{
+  "name": "Zenon Nowak",
+  "email": "zenon@example.com",
+  "password": "ze1234567"
+}
 
 # @baseUrl = https://connections-api.herokuapp.com
 # @token = YOUR_TOKEN_HERE

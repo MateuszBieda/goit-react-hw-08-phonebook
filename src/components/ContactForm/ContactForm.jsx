@@ -4,6 +4,7 @@ import { addContact } from '../../redux/contacts/operations';
 import { getContacts } from '../../redux/contacts/selectors';
 import { nanoid } from 'nanoid';
 import { toast } from 'react-toastify';
+import { Input, Button, FormLabel, Flex,Text } from '@chakra-ui/react';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ export const ContactForm = () => {
     const contact = {
       id: nanoid(),
       name: e.currentTarget.elements.name.value,
-      phone: e.currentTarget.elements.number.value,
+      number: e.currentTarget.elements.number.value,
     };
 
     const nameExist = contacts.find(
@@ -29,32 +30,41 @@ export const ContactForm = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <label>
-        <p className={css.paragraph}>Name</p>
-        <input
-          className={css.input}
+    <Flex as='form'   bgGradient="linear(to-r, green.400, yellow.300)" className={css.form} onSubmit={handleSubmit}>
+      <FormLabel >
+        <Text mb='9px' color='#2C7744' className={css.paragraph}>Name</Text>
+        <Input
+        mb='9px'
           id={nanoid()}
           type="text"
           name="name"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-      </label>
-      <label>
-        <p className={css.paragraph}>Number</p>
-        <input
-          className={css.input}
+      </FormLabel>
+      <FormLabel color='#2C7744' mb='9px' className={css.paragraph}>
+        <Text mb='9px' color='#2C7744' className={css.paragraph}>Number</Text>
+        <Input
+        mb='9px'
           id={nanoid()}
           type="tel"
           name="number"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-      </label>
-      <button className={css.button} type="submit">
+      </FormLabel>
+      <Button  variant="solid"
+        colorScheme="blue"
+        height="48px"
+        border="2px"
+        borderColor="green.500"
+        type="submit"
+        w="280px"
+        h="50px"
+        fontSize="20px"
+        background='#257C4A'>
         Add contact
-      </button>
-    </form>
+      </Button>
+    </Flex>
   );
 };
